@@ -1,9 +1,11 @@
-# Project status (Stage 1 foundation + part of Stage 2)
-Done: Next.js/TS/Tailwind scaffold; public home (hero with portrait, about, skills, education, resume, contact); /projects with search + category filter, empty/error states; /projects/[slug] showing only non-empty sections; sitemap, robots, metadata; SQL migration with RLS and storage bucket (supabase/migrations/0001_init.sql).
-Not done: admin dashboard (login, project CRUD, uploads, profile/resume editing, reorder, preview); pages reading profile/skills/education from DB (currently lib/content.ts); docs/ files other than this one; DEPLOYMENT_GUIDE.md; automated tests; image optimisation pipeline.
-Tested: see final report in chat (npm run build only). Nothing tested against a live Supabase project. Not deployed.
-Config needed: Supabase project, run migration, create admin user + insert into public.admins, set env vars (.env.example), set NEXT_PUBLIC_RESUME_URL.
-Verify: GitHub handle in lib/content.ts looks unusual.
+# Project status
+
+**Implemented:** Next.js/TypeScript/Tailwind public portfolio, project search and category filters, case-study pages, resume and contact sections, Supabase-backed admin workflow, project CRUD, draft/publish/archive states, and validated thumbnail uploads.
+
+**Still outstanding:** public deployment, end-to-end tests against a live Supabase project, responsive browser checks, accessibility/contrast review, automated tests, and remaining documentation. Profile, skills, and education content is currently maintained in `lib/content.ts` rather than edited through the admin UI.
+
+**Configuration:** follow `.env.example`; apply `supabase/migrations/0001_init.sql`; configure the Supabase project and admin account; set the resume URL. See the setup notes below.
+
 Next steps: (1) Stage 3 admin under /admin with Supabase Auth + middleware + server actions checking is_admin(); (2) DB-backed profile/skills/education; (3) uploads with server-side type/size checks; (4) docs, tests, deployment guide.
 
 ## Stage 3 (admin) - built 2026-10-26
@@ -12,7 +14,7 @@ Tested (local only): npm run build + tsc pass; running server redirects /admin, 
 NOT tested against real Supabase: login, create/edit/publish, uploads, draft privacy. Do these first after deploy (see TESTING below).
 Not done: cover/gallery images, file deliverables, reorder UI, preview page, profile/resume/skills/education editing from admin (still lib/content.ts), password reset, automated tests, remaining docs, DEPLOYMENT_GUIDE.md.
 Supabase project qffxhsiqjskvylccmscz: migration applied, 6 tables with RLS, bucket public-assets. Advisor warning on is_admin() accepted (RLS policies depend on it).
-GitHub repo u200cbvt/vamsi-portfolio: foundation committed by owner. Claude's GitHub connector is read-only (403 on branch creation), so code must be uploaded manually.
+GitHub repository: sarvendhra-vamsi/vamsi-portfolio. Claude's GitHub connector is read-only (403 on branch creation), so code must be uploaded manually.
 Vercel: not connected.
 Create the admin: Supabase > Authentication > Users > Add user (auto confirm), then SQL: insert into public.admins (user_id) select id from auth.users where email = 'YOUR_EMAIL';
 Next steps: deploy on Vercel with env vars; run the live test checklist; then profile/resume editing, cover/gallery/files, reorder, preview, docs, tests.
@@ -34,3 +36,7 @@ Tested: tsc + build pass; PDF text extracts correctly. Not browser-tested.
 ## Version 5 (2026-10-27) - redesign from the owner's reference board and master prompt
 Design system: navy #07111F, teal #12DCC6 primary, blue/violet sparingly, one sans family, tokens in tailwind.config.ts and globals.css. Hero with cropped real portrait (public/hero-portrait.jpg), chips, CTAs, proof row (project count is derived from data). About with photo + principle cards. ProjectExplorer: working search + tag filters + empty state with reset. Six distinct representative previews (dashboard, SQL, scraping, churn, tracker, EDA). Case-study pages for 5 resume projects (lib/portfolio.ts; only resume facts, no invented findings); GitHub links appear only when the repo is found via the API. Skills grouped with evidence links + soft skills. Education timeline. Resume card with Download + Open in new tab. Contact: real mailto fallback form (no fake success). Compact footer. Nav: sticky with scrolled state, active section, accessible mobile menu (aria-expanded, Escape closes).
 Tested: tsc + production build pass; local server smoke test of routes. NOT done: lint (no ESLint configured), automated tests, real-browser checks at 1440/1024/768/390/360, Lighthouse, screen-reader test, contrast measurement.
+
+
+## Version 6 (2026-11-02) — resume alignment
+Updated the public profile and site content to reflect the current resume: pharma/healthcare analytics interests, SQL/Python/Power BI/Excel, NumPy, data quality, business reporting, AI fluency, and data-engineering learning topics. Corrected the portfolio GitHub and LinkedIn links. Added FastAPI fundamentals and Bronze/Silver/Gold medallion architecture as developing learning topics, not professional experience. Refreshed the root README with setup instructions and an explicit note that deployment/live Supabase testing remain outstanding.
