@@ -34,6 +34,7 @@ export const skillGroups = [
     { name: "Exploratory data analysis (EDA)", keys: ["eda", "analysis"] },
     { name: "BeautifulSoup web scraping", keys: ["scrap", "beautifulsoup"] },
     { name: "Data cleaning and standardisation", keys: [] },
+    { name: "FastAPI fundamentals (developing)", keys: [] },
   ] },
   { icon: "chart", title: "BI and spreadsheets", items: [
     { name: "Power BI dashboards", keys: ["power bi", "dashboard"] },
@@ -54,6 +55,7 @@ export const skillGroups = [
     { name: "Business problem-solving", keys: [] },
     { name: "Stakeholder-ready reporting", keys: [] },
     { name: "Insight and recommendation framing", keys: [] },
+    { name: "AI fluency and prompt design", keys: [] },
     { name: "Attention to detail", keys: [] },
     { name: "Problem-solving and critical thinking", keys: [] },
   ] },
@@ -62,6 +64,7 @@ export const skillGroups = [
     { name: "ETL / ELT concepts", keys: [] },
     { name: "Data pipelines", keys: [] },
     { name: "Data warehouses", keys: [] },
+    { name: "Medallion architecture (Bronze / Silver / Gold)", keys: [] },
   ] },
 ];
 export const softSkills = [
