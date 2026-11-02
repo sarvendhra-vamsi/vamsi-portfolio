@@ -1,40 +1,87 @@
-// Editable site content, taken from the owner's own resume.
+// Public portfolio content. Keep claims aligned with the owner's resume and demonstrated work.
 export const site = {
-  name: "Vamsi", fullName: "Vamsi Bodigadla",
-  role: "Entry-level Data Analyst",
-  intro: "BCA graduate (2026) trained in data analytics. I use SQL, Python, Power BI and Excel to answer business questions and explain the results in plain language.",
-  location: "Hyderabad (open to relocation)",
+  name: "Vamsi",
+  fullName: "Vamsi Bodigadla",
+  role: "Data Analyst | Pharma & Healthcare Analytics",
+  intro: "2026 BCA graduate with hands-on data analytics training and projects in SQL, Python, Power BI and Excel. Interested in pharma, healthcare, life sciences and business operations analytics, while building data engineering fundamentals.",
+  location: "Andhra Pradesh, India (open to relocation)",
   email: "beatsvamsi@gmail.com",
-  linkedin: "https://www.linkedin.com/in/vamsi-bodigadla-717330244",
-  github: "https://github.com/u200cbvt",
+  linkedin: "https://www.linkedin.com/in/vamsibodigadla",
+  github: "https://github.com/sarvendhra-vamsi",
   resumeUrl: "/resume.pdf",
 };
-export const chips = ["SQL", "Python", "Power BI", "Excel", "EDA"];
+export const chips = ["SQL", "Python", "Power BI", "Excel", "EDA", "Data Quality"];
 export const about = [
-  "I am a 2026 BCA graduate who likes turning messy data into clear answers. I ask why a number moved, check it carefully, and explain the result in simple language.",
-  "I am curious about many fields, and I use that range to connect ideas and ask better questions. I am looking for an entry-level Data Analyst or Business Analyst role.",
+  "I am a 2026 BCA graduate who enjoys turning messy data into clear, useful answers. I focus on the business question, check data quality, analyse carefully, and explain the result in plain language.",
+  "My project work spans sales reporting, customer behaviour, pricing and operational datasets. I am especially interested in pharmaceutical and healthcare analytics, and I am building my understanding of data ingestion, ETL/ELT, pipelines and data warehouses.",
 ];
 export const principles = [
-  { icon: "compass", title: "Curious learner", text: "I keep learning new tools and topics, and I try them on real data." },
-  { icon: "link", title: "Problem solver", text: "I break a business question into parts and connect the dots between them." },
-  { icon: "eye", title: "Strategic thinker", text: "I look at the bigger picture and turn the analysis into a practical suggestion." },
+  { icon: "compass", title: "Start with the question", text: "I begin by understanding what the business needs to learn or decide." },
+  { icon: "link", title: "Trust the data", text: "I clean, validate, and check the limits of the data before interpreting it." },
+  { icon: "eye", title: "Make it useful", text: "I aim to communicate findings clearly and connect analysis to practical decisions." },
 ];
 export const skillGroups = [
-  { icon: "database", title: "SQL and databases", items: [{ name: "MySQL", keys: ["sql", "queries"] }, { name: "Joins and subqueries", keys: [] }, { name: "CTEs", keys: [] }, { name: "Window functions", keys: [] }, { name: "Data modelling", keys: [] }] },
-  { icon: "code", title: "Python and analysis", items: [{ name: "Pandas and NumPy", keys: ["python", "pandas"] }, { name: "Matplotlib and Seaborn", keys: [] }, { name: "Web scraping", keys: ["scrap", "beautifulsoup"] }, { name: "Streamlit apps", keys: [] }, { name: "Report automation", keys: [] }] },
-  { icon: "chart", title: "BI and spreadsheets", items: [{ name: "Power BI", keys: ["power bi", "dashboard"] }, { name: "DAX measures", keys: [] }, { name: "KPI design", keys: [] }, { name: "Drill-through reports", keys: [] }, { name: "Advanced Excel", keys: [] }, { name: "Google Sheets", keys: [] }] },
-  { icon: "sigma", title: "Statistics and EDA", items: [{ name: "Descriptive statistics", keys: [] }, { name: "Exploratory analysis", keys: ["eda", "analysis"] }, { name: "Correlation", keys: [] }, { name: "Outlier detection", keys: [] }, { name: "Segment and cohort analysis", keys: [] }, { name: "Data quality checks", keys: [] }] },
+  { icon: "database", title: "SQL and relational data", items: [
+    { name: "MySQL", keys: ["sql", "queries"] },
+    { name: "Joins and subqueries", keys: [] },
+    { name: "CTEs", keys: [] },
+    { name: "Window functions (including DENSE_RANK)", keys: [] },
+    { name: "Aggregations", keys: [] },
+  ] },
+  { icon: "code", title: "Python and data analysis", items: [
+    { name: "Python", keys: ["python"] },
+    { name: "Pandas and NumPy", keys: ["pandas"] },
+    { name: "Exploratory data analysis (EDA)", keys: ["eda", "analysis"] },
+    { name: "BeautifulSoup web scraping", keys: ["scrap", "beautifulsoup"] },
+    { name: "Data cleaning and standardisation", keys: [] },
+  ] },
+  { icon: "chart", title: "BI and spreadsheets", items: [
+    { name: "Power BI dashboards", keys: ["power bi", "dashboard"] },
+    { name: "KPI cards, slicers and drill-through", keys: [] },
+    { name: "DAX fundamentals", keys: [] },
+    { name: "Advanced Excel formulas", keys: [] },
+    { name: "PivotTables and conditional formatting", keys: [] },
+    { name: "Business reporting", keys: [] },
+  ] },
+  { icon: "sigma", title: "Statistics and data quality", items: [
+    { name: "Descriptive statistics", keys: [] },
+    { name: "Trend and pattern analysis", keys: [] },
+    { name: "Anomaly identification", keys: [] },
+    { name: "Data validation and integrity checks", keys: [] },
+    { name: "Accuracy and consistency checks", keys: [] },
+  ] },
+  { icon: "compass", title: "Business and communication", items: [
+    { name: "Business problem-solving", keys: [] },
+    { name: "Stakeholder-ready reporting", keys: [] },
+    { name: "Insight and recommendation framing", keys: [] },
+    { name: "Attention to detail", keys: [] },
+    { name: "Problem-solving and critical thinking", keys: [] },
+  ] },
+  { icon: "link", title: "Data engineering — learning", items: [
+    { name: "Data ingestion and staging", keys: [] },
+    { name: "ETL / ELT concepts", keys: [] },
+    { name: "Data pipelines", keys: [] },
+    { name: "Data warehouses", keys: [] },
+  ] },
 ];
-export const softSkills = ["Understanding business problems", "Pattern recognition", "Logical thinking", "Connecting ideas across fields", "Stakeholder negotiation", "Stakeholder communication", "Attention to detail"];
+export const softSkills = [
+  "Business problem-solving",
+  "Stakeholder communication",
+  "Ambiguous-task handling",
+  "Critical thinking",
+  "Team collaboration",
+  "Time management",
+  "Attention to detail",
+];
 export const timeline = [
   { group: "Education", title: "Bachelor of Computer Applications (BCA)", place: "Elite Degree College, Dubacherla, Andhra Pradesh", when: "2023 – 2026", note: "CGPA 8.2" },
-  { group: "Training", title: "Data Analytics Training Program", place: "Innomatics Research Labs, Hyderabad", when: "Completed", note: "Excel, SQL, Python, Power BI, Statistics" },
+  { group: "Training", title: "Data Analytics Training Program", place: "Innomatics Research Labs, Hyderabad", when: "Completed", note: "Excel, Python, SQL, Power BI, Statistics" },
   { group: "Education", title: "Intermediate (CSE)", place: "Elite Junior College, Dubacherla, A.P.", when: "2021 – 2023", note: "" },
   { group: "Education", title: "SSC", place: "ZPO High School, G. Kothapalle, A.P.", when: "2020 – 2021", note: "" },
 ];
 export const certs = [
-  { title: "AI Fluency: Prompt Design and Effective AI Usage", by: "Certified by Anthropic" },
+  { title: "AI Fluency: Prompt Design and Effective AI Usage", by: "Anthropic" },
   { title: "Typing Expert certification", by: "High-accuracy touch-typing" },
   { title: "Medium article on descriptive statistics", by: "Published writing" },
 ];
-export const languages = "English (fluent) · Telugu (native) · Hindi (working proficiency)";
+export const languages = "Telugu (native) · English (fluent) · Hindi (working proficiency)";
